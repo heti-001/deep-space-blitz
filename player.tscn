@@ -31,10 +31,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
+size = Vector2(63, 43)
 
 [node name="player" type="Area2D"]
-position = Vector2(-1, 2)
+position = Vector2(0, 2)
 script = ExtResource("1_sweqy")
 metadata/_edit_group_ = true
 
@@ -45,9 +46,9 @@ sprite_frames = SubResource("SpriteFrames_hqtel")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0.49999943, 3.5)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_sweqy")
+shape = SubResource("RectangleShape2D_sweqy")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="hit" from="." to="." method="_on_player_hit"]

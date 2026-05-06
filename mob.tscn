@@ -44,10 +44,12 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1qmh0"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qmh0"]
+size = Vector2(49, 53)
 
-[node name="mob" type="RigidBody2D"]
-position = Vector2(0, 2)
+[node name="mob" type="RigidBody2D" groups=["mobs"]]
+position = Vector2(-4, -1)
+scale = Vector2(0.7, 0.7)
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_1qmh0")
@@ -60,7 +62,8 @@ animation = &"fly"
 frame_progress = 0.9749965
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_1qmh0")
+position = Vector2(8.5, -0.5)
+shape = SubResource("RectangleShape2D_1qmh0")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
